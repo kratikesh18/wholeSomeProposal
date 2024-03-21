@@ -49,7 +49,7 @@ const pleaseData = {
 
 function App() {
   const [noButtonStyle, setNoButtonStyle] = useState({});
-  const [askText, setAskText] = useState("Hey Pookie , Do you Love me ... ??");
+  const [askText, setAskText] = useState("Hey Pookie , Do you Like me ... ?");
   const [yes, setYes] = useState(false);
 
   const [image, setImage] = useState(
