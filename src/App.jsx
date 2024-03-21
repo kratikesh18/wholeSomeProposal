@@ -48,10 +48,10 @@ const pleaseData = {
 };
 
 function App() {
+  const [index, setIndex] = useState(0);
   const [noButtonStyle, setNoButtonStyle] = useState({});
-  const [askText, setAskText] = useState("Hey Pookie , Do you Like me ... ?");
+  const [askText, setAskText] = useState("Hey Pookie , Do you Love me ... ??");
   const [yes, setYes] = useState(false);
-
   const [image, setImage] = useState(
     "https://media.tenor.com/SFy5Za0DyMEAAAAi/erm-fingers.gif"
   );
@@ -60,38 +60,28 @@ function App() {
     e.preventDefault();
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
-    const buttonWidth = 80;
-    const buttonHeight = 40;
-    const padding = 20; // Padding around the button
+    const buttonWidth = 80; // Assuming button width and height
+    const buttonHeight = 40; // Assuming button width and height
 
-    const randomX =
-      Math.random() * (screenWidth - buttonWidth - padding * 2) + padding;
-    const randomY =
-      Math.random() * (screenHeight - buttonHeight - padding * 2) + padding;
+    const randomX = Math.random() * (screenWidth - buttonWidth);
+    const randomY = Math.random() * (screenHeight - buttonHeight);
 
     setNoButtonStyle({
-      ...noButtonStyle,
       position: "absolute",
       left: `${randomX}px`,
       top: `${randomY}px`,
     });
 
-    setImage(
-      pleaseData.askingGifUrl[
-        Math.ceil(Math.random() * pleaseData.askingGifUrl.length)
-      ]
-    );
-    setAskText(
-      pleaseData.askingTexts[
-        Math.floor(Math.random() * pleaseData.askingTexts.length)
-      ]
-    );
+    setImage(pleaseData.askingGifUrl[index % pleaseData.askingGifUrl.length]);
+    setAskText(pleaseData.askingTexts[index % pleaseData.askingTexts.length]);
+    setIndex(index + 1);
   };
 
   if (!yes) {
     return (
       <div className=" w-full h-screen flex justify-center items-center flex-col bg-pink-300/40 ">
         <div className="flex flex-col justify-center items-center">
+          <h1 className="text-2xl font-bold">{askText}</h1>
           <div className="h-60 ">
             <img
               src={
@@ -103,8 +93,7 @@ function App() {
             />
           </div>
           <div className="text-center my-4 sm:p-4 ">
-            <h1 className="text-lg font-semibold">{askText}</h1>
-            <p className="text-lg">
+            <p className="text-lg font-semibold">
               {
                 pleaseData.proposal[
                   Math.floor(Math.random() * pleaseData.proposal.length)
