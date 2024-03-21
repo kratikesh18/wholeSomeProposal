@@ -113,7 +113,7 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center  border-4  gap-4">
+        <div className="flex justify-center items-center   gap-4">
           <button className="btns" onClick={() => setYes(true)}>
             Yes
           </button>
