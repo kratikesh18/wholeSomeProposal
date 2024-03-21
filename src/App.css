@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 768px) {
+  .btns {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .text-lg {
+    font-size: 14px;
+  }
+
+  .text-xl {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btns {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .text-lg {
+    font-size: 12px;
+  }
+
+  .text-xl {
+    font-size: 16px;
+  }
+}
