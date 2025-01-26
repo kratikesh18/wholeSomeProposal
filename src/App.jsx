@@ -14,15 +14,14 @@ const pleaseData = {
     // "Please accept this proposal and let's build a life together.",
     // "Please give me the honor of being your husband.",
     "Please make me the happiest person alive and say 'yes'.",
-  "Please click yes as a symbol of my love and commitment.",
-  "Please join me in creating a future filled with love and happiness.",
-  "Please be my partner for life and share in all of life's joys and sorrows.",
-  "Please allow me to cherish and love you for eternity.",
-  "Please say 'yes' and let's start our journey together.",
-  "Please make my dreams come true by being my husband.",
-  "Please say you'll marry me and make me the luckiest person in the world.",
-  "Please accept this proposal and let's build a life together.",
-  
+    "Please click yes as a symbol of my love and commitment.",
+    "Please join me in creating a future filled with love and happiness.",
+    "Please be my partner for life and share in all of life's joys and sorrows.",
+    "Please allow me to cherish and love you for eternity.",
+    "Please say 'yes' and let's start our journey together.",
+    "Please make my dreams come true by being my husband.",
+    "Please say you'll marry me and make me the luckiest person in the world.",
+    "Please accept this proposal and let's build a life together.",
   ],
   askingTexts: [
     // "Kya itna bura hu mein Mommy.. ? ",
@@ -46,7 +45,7 @@ const pleaseData = {
     "Mujhe apne dil se jodho...",
     "Dekho kitne pyare ho tum... phir bhi nakhre dikhate ho.",
     "Dekho kitne samjhdar ho tum... phir bhi mera pyar nahi samajhte.",
-    "Par main toh apni maa ko bhi bata chuki hun... dulhe ke barein mein."
+    "Par main toh apni maa ko bhi bata chuki hun... dulhe ke barein mein.",
   ],
 
   askingGifUrl: [
@@ -71,7 +70,9 @@ const pleaseData = {
 function App() {
   const [index, setIndex] = useState(0);
   const [noButtonStyle, setNoButtonStyle] = useState({});
-  const [askText, setAskText] = useState("Hey Pookie , Do you Love me ... ??");
+  const [askText, setAskText] = useState(
+    "Hey Handsome , Do you Love me ... ??"
+  );
   const [yes, setYes] = useState(false);
   const [image, setImage] = useState(
     "https://media.tenor.com/SFy5Za0DyMEAAAAi/erm-fingers.gif"
